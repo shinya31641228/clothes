@@ -16,4 +16,16 @@ class ProductController extends Controller
             'products' => Product::get()
         ]);
     }
+
+    /**
+     * 商品詳細を表示する
+     */
+    public function show($id)
+    {
+        return view('product.show',[
+            'product' => Product::find($id)
+        ]);
+    }
+
+
 }
